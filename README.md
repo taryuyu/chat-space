@@ -1,3 +1,4 @@
+
 ## usersテーブル
 
 |Column|Type|Options|
@@ -25,7 +26,7 @@
 
 |column|Type|Option|
 |------|----|------|
-|group_name|string|null: false, unique: true|
+|name|string|null: false, unique: true|
 
 ### Association
 _has_many :groups_users
