@@ -1,0 +1,24 @@
+.Chat-main
+  .Chat-main__group-info
+    .Chat-main__group-info__outline
+      .Chat-mian__group-info__message
+        テスト
+      .Chat-main__group-info__name
+        member:
+    =link_to "#", class:"Chat-main__group-info__form" do
+      Edit
+     
+  
+  .Chat-main__message-list
+
+  .Chat-main__footer
+    .Chat-main__footer__form
+      %form.Chat-main__footer__form__input
+        type a message
+      %label{class: "Chat-main__footer__form__contact"}
+        = icon('fas', 'image')
+        %input{type: "file"}
+        
+        
+      %sumbit.Chat-main__footer__form__submit 
+        send
