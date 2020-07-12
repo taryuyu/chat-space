@@ -2,29 +2,38 @@
   .Side-bar__header
     .Top-items
       .Top-items__name
+<<<<<<< Updated upstream
         masa
       .Top-items__icons
         = link_to"#"
         = icon("far fa-edit", class: "Top-items__icons--edit")
         = link_to"#"
         = icon("fas fa-cog", class: "Top-items__icons--config")
+=======
+        = current_user.name
+      %ul.Top-items__icon-box
+        %li.Top-items__icons--edit
+          =link_to new_group_path do
+            = icon("far fa-edit", class: "Top-items__icons--edit")
+        %li.Top-items__icons--config
+          =link_to edit_user_path(current_user) do  
+            = icon("fas fa-cog", class: "Top-items__icons--config")
+      -# .Top-items__icons
+        -# = link_to new_group_path do
+        -#   = icon("far fa-edit", class: "Top-items__icons--edit")
+        -# = link_to edit_user_path(current_user) do
+        -#   = icon("fas fa-cog", class: "Top-items__icons--config")
+>>>>>>> Stashed changes
 
   .Side-bar__messages
-    .Side-bar__group-list
-      .Side-bar__group-list__name
-        techcamp
-      .Side-bar__group-list__message 
-        まだメッセージはありません
-    .Side-bar__group-list
-      .Side-bar__group-list__name
-        techcamp
-      .Side-bar__group-list__message 
-        まだメッセージはありません
-    .Side-bar__group-list
-      .Side-bar__group-list__name
-        techcamp
-      .Side-bar__group-list__message 
-        まだメッセージはありません
+    - current_user.groups.each do |group|
+      .Side-bar__group-list
+        = link_to '#' do
+          .Side-bar__group-list__name
+            = group.name
+          .Side-bar__group-list__message 
+            まだメッセージはありません
+    
     
 
   

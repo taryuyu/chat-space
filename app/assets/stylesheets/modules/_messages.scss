@@ -25,21 +25,33 @@
         width: 160px;
         color: #ffffff;
         text-align: left;
-
-        
-        }
-
-      &__icons {
-        height: 20px;
-        width: 60px;
+      }
+      .Top-items__icon-box {
         display: flex;
-        justify-content:space-evenly;
-        color: #ffffff;
-        &__icons-edit {
-          padding-right: 5px;
+        justify-content: end;
+        width: 60px;
+        height: 30px;
+        font-weight: bold;
+        .Top-items__icons--edit {
+          height: 30px;
+          width: 30px;
+          // justify-content:space-evenly;
+          color: #ffffff;
+          // .Top-items__icon--edit {
+          //   padding-right: 5px;
+          // }
+          a {
+            color: #ffffff;
+          }
         }
-        &__icons-config {
-        }
+        .Top-items__icons--config {
+          color: #ffffff;
+          height: 30px;
+          width: 30px;
+          a {
+            color: #ffffff;
+          }
+        }  
       }
     }
   }
