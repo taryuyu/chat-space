@@ -2,14 +2,6 @@
   .Side-bar__header
     .Top-items
       .Top-items__name
-<<<<<<< Updated upstream
-        masa
-      .Top-items__icons
-        = link_to"#"
-        = icon("far fa-edit", class: "Top-items__icons--edit")
-        = link_to"#"
-        = icon("fas fa-cog", class: "Top-items__icons--config")
-=======
         = current_user.name
       %ul.Top-items__icon-box
         %li.Top-items__icons--edit
@@ -23,7 +15,7 @@
         -#   = icon("far fa-edit", class: "Top-items__icons--edit")
         -# = link_to edit_user_path(current_user) do
         -#   = icon("fas fa-cog", class: "Top-items__icons--config")
->>>>>>> Stashed changes
+
 
   .Side-bar__messages
     - current_user.groups.each do |group|
