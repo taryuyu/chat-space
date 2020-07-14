@@ -22,7 +22,7 @@
       display: flex;
       &__name {        
         height: 20px;
-        width: 160px;
+        width: 180px;
         color: #ffffff;
         text-align: left;
       }
@@ -31,6 +31,7 @@
         justify-content: end;
         width: 60px;
         height: 30px;
+        padding: 0 10px;
         font-weight: bold;
         .Top-items__icons--edit {
           height: 30px;
@@ -48,6 +49,7 @@
           color: #ffffff;
           height: 30px;
           width: 30px;
+          padding: 0 10px;
           a {
             color: #ffffff;
           }
