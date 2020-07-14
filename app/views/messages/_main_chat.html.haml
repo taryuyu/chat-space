@@ -2,23 +2,34 @@
   .Chat-main__group-info
     .Chat-main__group-info__outline
       .Chat-mian__group-info__message
-        テスト
+        = @group.name
       .Chat-main__group-info__name
-        member:
-    =link_to "#", class:"Chat-main__group-info__form" do
+        - @group.users.each do |user|
+          = user.name
+    =link_to edit_group_path(@group.id), class:"Chat-main__group-info__form" do
       Edit
      
   
   .Chat-main__message-list
+    = render @messages
+     
 
   .Chat-main__footer
     .Chat-main__footer__form
-      %form.Chat-main__footer__form__input
-        type a message
-      %label{class: "Chat-main__footer__form__contact"}
-        = icon('fas', 'image')
-        %input{type: "file"}
+      = form_with model: [@group,@message], html: {class: "Form"}, local:true do |f|
+        .Chat-main__footer__form__inp
+          = f.text_field :content, class: 'Chat-main__footer__form__input', placeholder: 'type a message'
+          = f.label :image, class: 'Chat-main__footer__form__contact' do
+            = icon('far', 'image', class: 'cForm_icon')
+            -# = icon('far', 'image', class: 'Form__icon')
+            =f.file_field :image, class: 'Hidden'
+        = f.submit 'Send', class: 'Chat-main__footer__form__submit'
+        -# = f.submit 'Send', class: 'Form__submit'            
+      -#   type a message
+      -# %label{class: "Chat-main__footer__form__contact"}
+      -#   = icon('fas', 'image')
+      -#   %input{type: "file"}
         
         
-      %sumbit.Chat-main__footer__form__submit 
-        send
+      -# %sumbit.Chat-main__footer__form__submit 
+      -#   send

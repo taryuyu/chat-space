@@ -43,53 +43,80 @@
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
   }
-  .Chat-main__footer {
-    height: 90px;
-    background-color: #d2d2d2;
-    width: calc(100vw - 300px);
-    &__form {
-      display: flex;
-      position: relative;
-      border: none;
-      height: 50px;
-      width: 100%;
-      padding: 0px 45px 0 15px;
+
+.Chat-main__footer {
+  height: 90px;
+  background-color: #d2d2d2;
+  width: calc(100vw - 300px);
+  display: flex;
+  justify-content: space-between;
+  
+  &__form {
+    display: flex;
+    position: relative;
+    border: none;
+    // height: 50px;
+    width: 100%;
+    padding: 0 45px 0 15px;
+    // display: inline-block;
+    // justify-content: space-between;
+    // .Chat-main__footer__form__inp 
       &__input {
         height: 50px;
-        width:  100%;
+        width:  900px;
         color: #434a54;
         background-color: #fafafa;
         border-style: none;
-        padding: 10px 40px 0 10px;
-        margin: 10px 0;
+        // padding: 10px 40px 0 10px;
+        margin: 20px 20px 20px 20px;
+        padding: 0 0 0 10px;
+        // display: flex;
+        position: relative;
+        
       }  
       &__contact {
         position: absolute;
-        top: 23px;
+        top: 38px;
         right: 220px;
         height: 20px;
+
+        // display: flex;
         input {
           display: none;
+      
+         
+
         }
       } 
-      &__submit {
-        width: 100px;
-        height: 50px;
-        background-color: #38aef0;
-        color: #fff;
-        font-size: 16px;
-        padding: 10px 30px;
-        margin: 10px 40px 10px 15px;
-        text-align: center;
-        justify-content: end;
-        
+     
+    &__submit {
+      width: 100px;
+      height: 50px;
+      background-color: #38aef0;
+      color: #fff;
+      font-size: 16px;
+      padding: 0 30px;
+      margin-left: 15px;
+      // margin: 10px 40px 10px 15px;
+      text-align: center;
+      border: none;
+      float: right;
+      position: absolute;
+      top:20px;
+      right:50px;
+        submit {
+          // display: inline-block;
+          
+        }
+      
 
-      }
-    }
-  }  
+  }
+  }
+}  
 }
+
   
-       
+      
 
 
 
