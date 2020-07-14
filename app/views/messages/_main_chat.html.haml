@@ -17,13 +17,13 @@
   .Chat-main__footer
     .Chat-main__footer__form
       = form_with model: [@group,@message], html: {class: "Form"}, local:true do |f|
-        .Chat-main__footer__form__input
+        .Chat-main__footer__form__inp
           = f.text_field :content, class: 'Chat-main__footer__form__input', placeholder: 'type a message'
           = f.label :image, class: 'Chat-main__footer__form__contact' do
             = icon('far', 'image', class: 'cForm_icon')
             -# = icon('far', 'image', class: 'Form__icon')
             =f.file_field :image, class: 'Hidden'
-        = f.submit 'Send', class: 'Chat-main__footer_form_submit'
+        = f.submit 'Send', class: 'Chat-main__footer__form__submit'
         -# = f.submit 'Send', class: 'Form__submit'            
       -#   type a message
       -# %label{class: "Chat-main__footer__form__contact"}
